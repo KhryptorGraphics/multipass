@@ -72,6 +72,8 @@ protected:
     VirtualMachine(const std::string& vm_name) : VirtualMachine(State::off, vm_name){};
     VirtualMachine(const VirtualMachine&) = delete;
     VirtualMachine& operator=(const VirtualMachine&) = delete;
+
+    bool shutdown_while_starting{false};
 };
 } // namespace multipass
 #endif // MULTIPASS_VIRTUAL_MACHINE_H
